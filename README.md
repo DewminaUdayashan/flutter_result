@@ -1,39 +1,56 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# flutter_result
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A simple and lightweight package that provides a `Result` type for handling success and error cases in Flutter and Dart. This package is inspired by the `Either` type in the [dartz](https://pub.dev/packages/dartz) package.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Simple and lightweight `Result` type
+- Supports both success and error cases
+- Easy to integrate into existing Flutter and Dart projects
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To install this package, add the following dependency to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  result_type: ^1.0.0
+```
+
+Then run flutter pub get to download the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here's an example of how to use the Result type in your code:
 
 ```dart
-const like = 'sample';
+import 'package:result_type/result_type.dart';
+
+Result<String, Exception> getData() {
+  try {
+    // fetch data from the server
+    return Result.success('data');
+  } catch (e) {
+    return Result.error(Exception('Failed to fetch data'));
+  }
+}
+
+void main() {
+  final result = getData();
+  result.open(
+    onError: (error) => print('Error: $e'),
+    onSuccess: (value) => print('Data: $data'),
+  );
+}
 ```
+In this example, the getData function returns a Result object that contains either a String value (in the case of success) or an Exception object (in the case of an error). The open method is then used to handle each case separately.
 
-## Additional information
+## Contributing
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+To report bugs, suggest new features, or contribute code to this package, please open an issue or a pull request on Github.
+
+## License
+
+This package is released under the MIT License.
+
+
