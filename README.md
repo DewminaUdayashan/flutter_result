@@ -49,4 +49,7 @@ In this example, the getData function returns a Result object that contains eith
 
 To report bugs, suggest new features, or contribute code to this package, please open an issue or a pull request on Github.
 
+## License
+
+This package is released under the [MIT License](https://github.com/DewminaUdayashan/flutter_result/blob/master/LICENSE).
 
