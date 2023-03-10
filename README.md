@@ -14,7 +14,7 @@ To install this package, add the following dependency to your `pubspec.yaml` fil
 
 ```yaml
 dependencies:
-  result_type: ^1.0.0
+  flutter_result: ^1.0.0
 ```
 
 Then run flutter pub get to download the package.
@@ -48,9 +48,5 @@ In this example, the getData function returns a Result object that contains eith
 ## Contributing
 
 To report bugs, suggest new features, or contribute code to this package, please open an issue or a pull request on Github.
-
-## License
-
-This package is released under the MIT License.
 
 
