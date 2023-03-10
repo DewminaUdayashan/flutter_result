@@ -39,7 +39,7 @@ void main() {
   final result = getData();
   result.open(
     onError: (error) => print('Error: $e'),
-    onSuccess: (value) => print('Data: $data'),
+    onSuccess: (value) => print('Data: $value'),
   );
 }
 ```
