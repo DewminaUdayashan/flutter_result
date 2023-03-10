@@ -14,7 +14,7 @@ To install this package, add the following dependency to your `pubspec.yaml` fil
 
 ```yaml
 dependencies:
-  flutter_result: ^1.0.0
+  flutter_result: ^0.0.1
 ```
 
 Then run flutter pub get to download the package.
