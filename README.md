@@ -38,10 +38,11 @@ Result<String, Exception> getData() {
 void main() {
   final result = getData();
   result.open(
-    onError: (error) => print('Error: $e'),
-    onSuccess: (value) => print('Data: $value'),
+     (onSuccess) => print('Data : $onSuccess'),
+     (onError) => print('Error : $onError'),
   );
 }
+
 ```
 In this example, the getData function returns a Result object that contains either a String value (in the case of success) or an Exception object (in the case of an error). The open method is then used to handle each case separately.
 
