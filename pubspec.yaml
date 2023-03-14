@@ -1,7 +1,7 @@
 name: flutter_result
 description: Flutter Result is a lightweight and easy-to-use package that provides a custom Result type for handling the outcome of a method call in Flutter.
 version: 0.0.1
-homepage:
+homepage: https://github.com/DewminaUdayashan/flutter_result
 
 environment:
   sdk: '>=2.19.3 <3.0.0'
