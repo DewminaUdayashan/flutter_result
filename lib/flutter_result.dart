@@ -13,7 +13,7 @@ class Result<T, E> {
       : isSuccess = false,
         value = null;
 
-  R open<R>(R Function(T? value) onSuccess, R Function(E? error) onError) {
+  R open<R>(R Function(T? onSuccess) onSuccess, R Function(E? onError) onError) {
     return isSuccess ? onSuccess(value) : onError(errorMessage);
   }
 }
