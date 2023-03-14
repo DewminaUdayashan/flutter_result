@@ -9,7 +9,8 @@ void main() {
       expect(result.value, 42);
       expect(result.errorMessage, null);
 
-      final value = result.open<int>((value) => value!, (error) => throw Exception(error));
+      final value = result.open<int>(
+          (value) => value!, (error) => throw Exception(error));
       expect(value, 42);
     });
 
@@ -18,7 +19,11 @@ void main() {
       expect(result.isSuccess, false);
       expect(result.value, null);
       expect(result.errorMessage, 'Something went wrong');
-      expect(() => result.open<int>((onSuccess) => onSuccess!, (onError) => throw Exception(onError)), throwsException);
+      expect(
+        () => result.open<int>(
+            (onSuccess) => onSuccess!, (onError) => throw Exception(onError)),
+        throwsException,
+      );
     });
   });
 }
